@@ -2,15 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
-import { BsChatRightDots } from 'react-icons/bs';
+import { BiConversation } from 'react-icons/bi';
 import color from '../styles/color';
 import fontsize from '../styles/fontsize';
 
+import { HiOutlineViewfinderCircle } from "react-icons/hi2";
+
 const { primary, light, dark } = color;
-const { big, extraBig } = fontsize;
+const { big, extraBig, normal } = fontsize;
 
 const StyledHeader = styled.header`
-  height: 90px;
+  min-height: 80px;
   display: flex;
   background: ${primary};
   color: ${light};
@@ -18,8 +20,7 @@ const StyledHeader = styled.header`
   padding: 0 20px;
   justify-content: space-between;
 
-  .left,
-  .right {
+  .left,  .right {
     display: flex;
     flex-grow: 1;
   }
@@ -34,10 +35,6 @@ const StyledHeader = styled.header`
     display: flex;
     align-items: center;
 
-    &.on {
-      text-shadow: 2px 2px 5px ${dark};
-    }
-
     svg {
       font-size: ${extraBig};
     }
@@ -46,19 +43,30 @@ const StyledHeader = styled.header`
   a + a {
     margin-left: 25px;
   }
+
+  span {
+    margin-left: 10px;
+  }
+
+  .producer{
+    font-size: ${normal}
+  }
 `;
 
 const Header = () => {
   return (
     <StyledHeader className="layout-width">
       <div className="left">
-        <NavLink
-          to="/"
-          className={({ isActive }) => classNames({ on: isActive })}
-        >
-          <BsChatRightDots />
-          <span>AI와 대화</span>
+        <NavLink to="/" className={({ isActive }) => classNames({ on: isActive })}>
+          <BiConversation />
+          <span>AI랑 나누는 이야기</span>
         </NavLink>
+      </div>
+      <div className='right'>
+        <HiOutlineViewfinderCircle />
+        <a href='https://github.com/KimMarinet' className='producer'>
+          Producer
+        </a>
       </div>
     </StyledHeader>
   );

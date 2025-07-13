@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
+@font-face{
+  font-family: "NEXON_Warhaven_Bold";
+  font-weight: normal;
+  src: url("../src/global/styles/fonts/NEXON_Warhaven_Bold.ttf") format("truetype");
+}
+
 * {
   box-sizing: border-box;
   outline: none;
-  font-family: 'Jua', sans-serif;
+  /*font-family: 'Jua', sans-serif;*/
+  font-family: 'NEXON_Warhaven_Bold';
 }
 
 html {
@@ -23,6 +30,7 @@ body #root {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: auto;
 }
 
 main {

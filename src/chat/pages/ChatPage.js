@@ -1,7 +1,16 @@
 import React from 'react';
+import ChatContainer from '../containers/ChatContainer';
+import { Helmet } from 'react-helmet-async';
 
 const ChatPage = () => {
-  return <h1>채팅...</h1>;
+  return (
+    <>
+      <Helmet>
+        <title>AI와 대화</title>
+      </Helmet>
+      <ChatContainer />
+    </>
+  );
 };
 
 export default React.memo(ChatPage);
