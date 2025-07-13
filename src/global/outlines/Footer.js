@@ -6,7 +6,7 @@ const { light } = color;
 
 const StyledFooter = styled.footer`
   height: 100px;
-  background: ${light};
+  background: #a9c6e9;
 `;
 
 const Footer = () => {

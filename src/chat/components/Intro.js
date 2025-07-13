@@ -2,11 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
+import fontsize from "../../global/styles/fontsize"
+
 import img1 from "../../global/images/AICharacters/Diesel.png"
 import img2 from "../../global/images/AICharacters/Exia.png"
 import img3 from "../../global/images/AICharacters/Liter.png"
 import img4 from "../../global/images/AICharacters/Rapi_RedHood.png"
 import img5 from "../../global/images/AICharacters/Scarlet_BlackShadow.png"
+
+const { medium } = fontsize;
 
 const Wrapper = styled.div`
     display: flex;
@@ -26,6 +30,10 @@ const Wrapper = styled.div`
         justify-content: center;
         gap: 4px;
         margin: 0px 10px;
+    }
+
+    .AIimg{
+        font-size: ${medium};
     }
 `;
 
